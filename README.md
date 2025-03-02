@@ -12,8 +12,6 @@ This project integrates **traffic prediction** and **pothole detection** using a
 ✅ **Google Maps API Integration** – Displays routes and pothole locations on an interactive map.  
 ✅ **Dynamic Rerouting** – Suggests alternative routes in case of heavy traffic.  
 
----
-
 ## 📜 Table of Contents  
 
 - [🚀 Setup Instructions](#-setup-instructions)  
@@ -25,16 +23,14 @@ This project integrates **traffic prediction** and **pothole detection** using a
 - [⚠️ Troubleshooting](#-troubleshooting)  
 - [🚀 Future Enhancements](#-future-enhancements)  
 
----
-
 ## 🚀 Setup Instructions  
 
 ### **1️⃣ Install Prerequisites**  
 
-Make sure you have:  
-✔ Python 3.8+ installed  
-✔ Conda installed (for virtual environment)  
-✔ A **Google Maps API key**  
+Ensure you have the following installed:  
+✔ **Python 3.8+**  
+✔ **Conda** (for virtual environment)  
+✔ **Google Maps API key**  
 
 ### **2️⃣ Create & Activate a Conda Environment**  
 ```bash
@@ -46,51 +42,43 @@ conda activate traffic_pothole
 pip install -r requirements.txt
 ```
 
-### Running the Backend (Flask API)
+## 🖥 Running the Backend (Flask API)  
 
-   # Navigate to the backend folder:
 ```bash
 cd Code_Files/backend 
+python app.py
+```
+Backend will be running at:  
+```
+http://127.0.0.1:5000/
 ```
 
-#   Start the Flask API:
+## 💻 Running the Frontend (Streamlit App)  
 
-python app.py
-
-The backend should now be running at:
-
-    http://127.0.0.1:5000/
-
-💻 Running the Frontend (Streamlit App)
-
-    Open a new terminal window.
-    Navigate to the frontend folder:
-
+```bash
 cd Code_Files/frontend
+streamlit run main.py
+```
+Open the displayed **localhost URL** in your browser.  
 
-Start the Streamlit app:
+## 🕵️‍♂️ Testing Pothole Detection  
 
-    streamlit run main.py
+1. Go to **Pothole Detection** in the Streamlit app.  
+2. Upload an image of a road with potholes.  
+3. The system will return an **annotated image** with detected potholes.  
 
-    Open the displayed localhost URL in your browser.
+## 🚗 Testing Traffic Prediction  
 
-🕵️‍♂️ Testing Pothole Detection
+1. Select a **junction** and **destination** in the Streamlit app.  
+2. Choose a **date and time**.  
+3. Click **"Predict Traffic"** to get congestion levels.  
+4. The app will display:  
+   - **Estimated traffic percentage**  
+   - **Suggested alternative routes if traffic is high**  
 
-    Go to the Pothole Detection section in the Streamlit app.
-    Upload an image of a road with potholes.
-    The system will return an annotated image with detected potholes.
+## 📂 Folder Structure  
 
-🚗 Testing Traffic Prediction
-
-    Select a junction and destination in the Streamlit app.
-    Choose a date and time.
-    Click "Predict Traffic" to get congestion levels.
-    The app will display:
-        Estimated traffic percentage
-        Suggested alternative routes if traffic is high
-
-📂 Folder Structure
-
+```
 Code_Files/
 │   requirements.txt   # Required Python packages
 │
@@ -118,31 +106,28 @@ Code_Files/
 │           model_train.ipynb  # Jupyter Notebook for training LSTM
 │           scaler.pkl  # Scaler for traffic model
 │           updated_traffic.csv  # Processed traffic dataset
+```
 
-⚠️ Troubleshooting
-Backend Issues
+## ⚠️ Troubleshooting  
 
-    If the Flask API fails to start, install Flask manually:
+### **Backend Issues**  
+- If the Flask API **fails to start**, install Flask manually:  
+  ```bash
+  pip install Flask
+  ```
+- Ensure `best.pt` and `lstm_traffic_model.h5` exist in `backend/models/`.
 
-    pip install Flask
+### **Frontend Issues**  
+- If the Streamlit app **fails to start**, install missing packages:  
+  ```bash
+  pip install streamlit folium requests
+  ```
+- Check your **Google Maps API Key** in `config.py` if maps don't load.
 
-    Ensure best.pt and lstm_traffic_model.h5 exist in backend/models/.
+## 🚀 Future Enhancements  
 
-Frontend Issues
+✅ **Real-time traffic updates using live APIs**  
+✅ **Mobile app integration**  
+✅ **Improved pothole detection with semantic segmentation**  
 
-    If the Streamlit app fails, install missing packages:
-
-    pip install streamlit folium requests
-
-    Check your Google Maps API Key in config.py if maps don't load.
-
-🚀 Future Enhancements
-
-✅ Real-time traffic updates using live APIs
-✅ Mobile app integration
-✅ Improved pothole detection with semantic segmentation
-💡 Contributions & Feedback
-
-Contributions are welcome! Feel free to submit pull requests or report issues. 🚀
-
-📧 Contact: alexkhundongbam260@gmail.com
+📧 **Contact:** [alexkhundongbam260@gmail.com](mailto:alexkhundongbam260@gmail.com)  
