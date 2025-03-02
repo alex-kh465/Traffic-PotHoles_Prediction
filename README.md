@@ -1,4 +1,4 @@
-# 🚦 Traffic & Pothole Detection System 🛣️  
+# 🚦 Traffic Prediction & Pothole Detection System 🛣️  
 
 ![Traffic & Pothole Detection](https://images.unsplash.com/photo-1510915228340-29c85a43dcfe)  
 
