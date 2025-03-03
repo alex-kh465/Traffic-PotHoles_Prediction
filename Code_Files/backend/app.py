@@ -6,9 +6,11 @@ import numpy as np
 import pickle
 import datetime
 import os
+from flask_cors import CORS
 import io
 
 app = Flask(__name__, static_folder="static")
+CORS(app)
 
 # Load models
 traffic_model = load_model("models/lstm_traffic_model.h5")  # Keras Model
