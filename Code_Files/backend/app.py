@@ -11,7 +11,6 @@ import io
 
 app = Flask(__name__, static_folder="static")
 CORS(app)
-
 # Load models
 traffic_model = load_model("models/lstm_traffic_model.h5")  # Keras Model
 pothole_model = YOLO("models/best.pt")  # YOLO Model
