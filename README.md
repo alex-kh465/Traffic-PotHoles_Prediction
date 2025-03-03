@@ -34,7 +34,7 @@ Ensure you have the following installed:
 
 ### **2️⃣ Create & Activate a Conda Environment**  
 ```bash
-conda create --name traffic_pothole python=3.8
+conda create --name traffic_pothole python=3.10
 conda activate traffic_pothole
 ```
 ### **3️⃣ Install Required Dependencies**  
